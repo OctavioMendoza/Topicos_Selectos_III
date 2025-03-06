@@ -11,6 +11,8 @@ def create_logs(sample_size=10):
 
     df_sample.to_json(f'../logs/{name}.log', orient="records")
 
+    print('Creating Logs')
+
 
 
 
