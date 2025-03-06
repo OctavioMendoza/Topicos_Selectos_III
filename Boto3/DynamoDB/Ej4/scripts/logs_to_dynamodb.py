@@ -1,6 +1,7 @@
 import boto3
 import json
 from decimal import Decimal
+import uuid
 
 def list_tables():
     db = boto3.client('dynamodb')
@@ -69,16 +70,22 @@ if __name__ == "__main__":
                      provisioned_throughput=provisioned_throughput)
         
     # Load Json
-    json_file_path = '../logs/2025-02-26_20-39-26.log'
+    json_file_path = '../logs/2025-03-05_19-41-59.log'
     with open(json_file_path) as json_file:
         orders_data = json.load(json_file, parse_float=Decimal)
 
-    load_json(json_data=orders_data, table_name=table_name)
+    for item in orders_data:
+        invoice = item['InvoiceNo']
+        customer = int(item['CustomerID'])
+        orderDate = item['InvoiceDate']
+        quantity = item['Quantity']
+        description = item['Description']
+        unitPrice = item['UnitPrice']
+        country = item['Country'].rstrip()
+        stockCode = item['StockCode']   
 
+        orderID = invoice + "-" + stockCode + "-" + uuid.uuid4().hex 
+    
+        print(orderID)
 
-
-    #movie_table = create_table(table_name=table_name,
-    #                           key_schema=key_schema,
-    #                           attribute_definitions=attribute_definitions,
-    #                           provisioned_throughput=provisioned_throughput)
-    #print("Table status : ", movie_table.table_status)
+    #load_json(json_data=orders_data, table_name=table_name)
