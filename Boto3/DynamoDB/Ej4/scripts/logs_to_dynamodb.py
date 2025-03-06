@@ -33,6 +33,16 @@ def load_json(json_data, table_name):
         print(f"Adding item: {item}")
         table.put_item(Item=item)
 
+def put_bash(table_name, items):
+
+    db = boto3.resource('dynamodb')
+    table = db.Table(table_name)
+
+    with table.batch_writer() as batch:
+        for item in items:
+            batch.put_item(Item=item)
+        print("Batch insert successful.")
+
 if __name__ == "__main__":
     
     table_name = 'Orders'
@@ -74,6 +84,7 @@ if __name__ == "__main__":
     with open(json_file_path) as json_file:
         orders_data = json.load(json_file, parse_float=Decimal)
 
+    item_list = []
     for item in orders_data:
         invoice = item['InvoiceNo']
         customer = int(item['CustomerID'])
@@ -85,7 +96,20 @@ if __name__ == "__main__":
         stockCode = item['StockCode']   
 
         orderID = invoice + "-" + stockCode + "-" + uuid.uuid4().hex 
-    
-        print(orderID)
 
-    #load_json(json_data=orders_data, table_name=table_name)
+        json_data = {
+                        'CustomerID': Decimal(customer),
+                        'OrderID': orderID,
+                        'Invoice': invoice,
+                        'OrderDate': orderDate,
+                        'Quantity': Decimal(quantity),
+                        'UnitPrice': Decimal(unitPrice),
+                        'Description': description,
+                        'Country': country,
+                        'StockCode':stockCode
+                        }
+        item_list.append(json_data)
+    
+
+        #load_json(json_data=json_data, table_name=table_name)
+        put_bash(table_name=table_name, items=item_list)
