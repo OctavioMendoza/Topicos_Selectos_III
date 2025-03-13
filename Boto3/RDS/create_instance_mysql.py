@@ -16,7 +16,7 @@ def create_instance():
         MasterUserPassword='password',
         Port=3306,
         EngineVersion='8.0.32',
-        PubliclyAccessible=False,
+        PubliclyAccessible=True,
         StorageType='gp2'
     )
 

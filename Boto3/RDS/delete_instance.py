@@ -6,7 +6,7 @@ def delete_instance():
 
     response = rds_client.delete_db_instance(
         DBInstanceIdentifier="rdstest",
-        SkipFinalSnapshot=False,
+        SkipFinalSnapshot=True,
         FinalDBSnapshotIdentifier="rdstest-final-snapshot",
         DeleteAutomatedBackups=True
 
