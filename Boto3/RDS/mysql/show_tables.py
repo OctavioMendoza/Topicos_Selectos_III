@@ -1,13 +1,13 @@
-import mysql.connector as mc
+import pymysql
 
 
 def show_tables():
     try:
-        mydb = mc.connect(
+        mydb = pymysql.connect(
             host="rdstest.c9rhzfcjvz27.us-east-2.rds.amazonaws.com",
             user="admin",
             password="password",
-            database="rdstest"
+            database="dbmlruns"
         )
 
         mycursor = mydb.cursor()
@@ -18,7 +18,7 @@ def show_tables():
             print(table)
 
 
-    except mc.Error as e:
+    except pymysql.MySQLError as e:
         print("Can not show the tables {} ".format(e))
 
 if __name__ == '__main__':
