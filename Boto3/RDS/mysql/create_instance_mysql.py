@@ -17,8 +17,8 @@ def create_instance():
         Port=3306,
         EngineVersion='8.0.32',
         PubliclyAccessible=True,
-        StorageType='gp2'
-#        BackupRetentionPeriod=0  # ← disables automated backups, but also disables point-in-time recovery. Only for test, not production
+        StorageType='gp2',
+        BackupRetentionPeriod=0  # ← disables automated backups, but also disables point-in-time recovery. Only for test, not production
     )
 
     pprint(response)
