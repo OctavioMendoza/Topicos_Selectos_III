@@ -6,6 +6,7 @@
 /WiDS2025/data/TEST
 /WiDS2025/data/TRAIN
 **/__pycache__
-mlruns/203651764970985176/
-mlruns/models/
-
+/WiDS2025/mlruns/203651764970985176/
+/WiDS2025/mlruns/models/
+/WiDS2025/mlruns/557495972463532595/
+/WiDS2025/mlruns/models/
