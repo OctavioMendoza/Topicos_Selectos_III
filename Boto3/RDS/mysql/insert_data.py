@@ -12,13 +12,13 @@ def insert_data():
 
         mycursor = mydb.cursor()
 
-        id = int(input("Dame el ID: ") or 0)
+        id = input("Dame el ID: ") or None
         name = input("Please enter your name : ")
         lastname = input("Please enter your lastname : ")
 
-        if id != 0:
+        if id:
             query = "INSERT INTO Person (id, name, lastname) VALUES (%s, %s, %s)"
-            value = (id, name,lastname)
+            value = (int(id), name,lastname)
         else:
             query = "INSERT INTO Person (name, lastname) VALUES (%s, %s)"
             value = (name,lastname)

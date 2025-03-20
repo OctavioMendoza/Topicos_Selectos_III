@@ -12,7 +12,7 @@ def delete_data():
 
         mycursor = mydb.cursor()
 
-        query = "DELETE FROM Person WHERE id='1'"
+        query = "DELETE FROM Person WHERE id='4'"
 
         mycursor.execute(query)
 
