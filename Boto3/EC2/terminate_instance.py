@@ -9,5 +9,5 @@ def terminate_instance(instance_id):
 
 
 if __name__ == '__main__':
-    instance_id = 'i-0e47492c75376c1f6'
+    instance_id = 'i-02adc26d9ec09dc64'
     terminate_instance(instance_id=instance_id)

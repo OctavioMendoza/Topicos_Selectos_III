@@ -8,5 +8,5 @@ def stop_instance(instance_id):
 
 
 if __name__ == '__main__':
-    instance_id = 'i-01382a00dce563c4f'
+    instance_id = 'i-02adc26d9ec09dc64'
     stop_instance(instance_id=instance_id)

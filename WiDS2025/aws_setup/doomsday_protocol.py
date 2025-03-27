@@ -39,7 +39,7 @@ def delete_instance(db_id):
     print(response)
 
 if __name__ == '__main__':
-    instance_id = 'i-0b4a8ba25603b0ec0'
+    instance_id = 'i-0d4dcb8fb67a6d0d3'
     db_id = 'mlflow-db'
     terminate_instance(instance_id=instance_id)
     delete_bucket(bucket_name='tsiii-ivant-mlflow-artifacts-remote')

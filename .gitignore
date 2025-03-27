@@ -5,6 +5,8 @@
 /WiDS2025/data/widsdatathon2025.zip
 /WiDS2025/data/TEST
 /WiDS2025/data/TRAIN
+/WiDS2025/data/TRAIN_NEW
+/WiDS2025/data/TRAIN_OLD
 **/__pycache__
 /WiDS2025/mlruns/203651764970985176/
 /WiDS2025/mlruns/models/
