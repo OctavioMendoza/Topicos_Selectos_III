@@ -22,7 +22,8 @@ def mlflow_logger(func):
     def wrapper(*args, **kwargs):
         #create a new experiment if not in mlruns directory
         mlruns_path = mlruns_data_path()
-        mlflow.set_tracking_uri(mlruns_path)
+        #mlflow.set_tracking_uri(mlruns_path)
+        mlflow.set_tracking_uri('http://ec2-3-138-178-59.us-east-2.compute.amazonaws.com:5000')
         #print(mlflow.get_artifact_uri())
         experiment_name = 'WIDS2025'
 
