@@ -34,8 +34,8 @@ def main():
     ev.evaluate_model(LogisticRegression(solver='lbfgs', max_iter=5000))
     
     # prediction with test dataset
-    sub = ModelSubmission(X=df_test, version=1, threshold=0.5)
-    sub.to_submission(output_name='submission.csv')
+    #sub = ModelSubmission(X=df_test, version=1, threshold=0.5)
+    #sub.to_submission(output_name='submission.csv')
 
 if __name__ == '__main__':
     main()
