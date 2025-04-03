@@ -11,5 +11,5 @@ def verify_email(email):
     print(response)
 
 if __name__ == '__main__':
-    email = 'toledano.ivan10@gmail.com'
+    email = 'toledano.ivan16@gmail.com'
     verify_email(email=email)

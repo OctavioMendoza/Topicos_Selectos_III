@@ -25,10 +25,10 @@ def send_templated_email(
 
 if __name__ == '__main__':
     source = 'toledano.ivan16@gmail.com'
-    to = ['toledano.ivan16@gmail.com']
-    cc = []
+    to = ['eduardo.fletes1892@alumnos.udg.mx']
+    cc = ['ivan.toledano@academicos.udg.mx']
     reply_to = ['toledano.ivan16@gmail.com']
-    template = 'TemplateTSIII'
+    template = 'TemplateTest'
     data = '{"replace":"value"}'
 
     send_templated_email(

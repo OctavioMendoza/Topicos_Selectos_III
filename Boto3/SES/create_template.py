@@ -15,8 +15,8 @@ def create_template(template_name, subject_part, text_part, html_part):
     print(response)
 
 if __name__ == '__main__':
-    template_name = 'TemplateTSIII'
-    subject_part = 'Bienvenido al taller de análisis de datos con Pandas y Sklearn'
+    template_name = 'TemplateTest'
+    subject_part = 'Bienvenido al taller de análisis de datos con Pandas y Sklearn2'
     text_part = 'Gracias por haberte inscrito al taller de análisis de datos con Pandas y Sklearn'
     html_part = 'Gracias por haberte inscrito al taller de análisis de datos con Pandas y Sklearn'
 

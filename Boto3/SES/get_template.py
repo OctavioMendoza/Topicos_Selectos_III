@@ -21,6 +21,6 @@ def list_templates():
 
 
 if __name__ == '__main__':
-    template_name = 'TemplateTSIII'
+    template_name = 'TemplateTest'
     #list_templates()
     get_template(template_name=template_name)

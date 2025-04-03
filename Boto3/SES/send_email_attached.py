@@ -42,6 +42,6 @@ if __name__ == '__main__':
         source_email="toledano.ivan16@gmail.com",
         to_addresses=["toledano.ivan16@gmail.com"],
         subject="Taller de análisis de datos con Python y Pandas",
-        body_text="Gricias por tu participación en el taller. Se anexa el temario del curso.",
+        body_text="Gracias por tu participación en el taller. Se anexa el temario del curso.",
         attachment_path="README.md"
     )
