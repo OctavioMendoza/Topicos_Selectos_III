@@ -2,10 +2,10 @@ import boto3
 
 # Configuration
 REGION = 'us-east-2'
-AMI_ID = 'ami-05716d7e60b53d380'
+AMI_ID = 'ami-04985531f48a27ae7'
 INSTANCE_TYPE = 't2.micro'
 INSTANCE_NAME = 'Mlflow_Server'
-KEY_NAME = 'tsii_key'
+KEY_NAME = 'tsiii_25a'
 SECURITY_GROUP_NAME = 'security-group-mlflow'
 
 # Initialize EC2 resource

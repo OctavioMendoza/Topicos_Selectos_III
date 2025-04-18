@@ -15,4 +15,4 @@ def create_bucket(bucket_name):
     print(response)
 
 if __name__ == '__main__':
-    create_bucket(bucket_name="tsiii-ivant-mlflow-artifacts-remote")
+    create_bucket(bucket_name="tsiii-octavio-mlflow-artifacts-remote")
